@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>CEP</title>
+</head>
+<body>
+    <section id="app">
+        <div id="app__zipcode">
+            <form id="app__zipcode__form">
+                <h1 class="app__title"> Encontre um endereço pelo CEP</h1>
+                <div class="app__zipcode__input__wrapper">
+                    <input id="cep-input" maxlength="8" type="text"placeholder="Digite um CEP (apenas números)" aria-live="polite" class="app__zipcode__input">
+                    <button id="app__zipcode__button" type="button" class="sc-gtsrHT app__zipcode__button">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <svg data-rotate="true" id="load" class="load" data-visible="false" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 497 497" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><circle cx="98" cy="376" r="53" fill="#a5a5ab" data-original="#909ba6" class="" opacity="1"></circle><circle cx="439" cy="336" r="46" fill="#4c4c56" data-original="#c8d2dc" class="" opacity="1"></circle><circle cx="397" cy="112" r="38" fill="#10101e" data-original="#e9edf1" class="" opacity="1"></circle><ellipse cx="56.245" cy="244.754" fill="#c3c3c7" rx="56.245" ry="54.874" data-original="#7e8b96" class="" opacity="1"></ellipse><ellipse cx="217.821" cy="447.175" fill="#88888f" rx="51.132" ry="49.825" data-original="#a2abb8" class="" opacity="1"></ellipse><ellipse cx="349.229" cy="427.873" fill="#6a6a72" rx="48.575" ry="47.297" data-original="#b9c3cd" class="" opacity="1"></ellipse><ellipse cx="117.092" cy="114.794" fill="#e1e1e3" rx="58.801" ry="57.397" data-original="#5f6c75" class="" opacity="1"></ellipse><ellipse cx="453.538" cy="216.477" fill="#2e2e3a" rx="43.462" ry="42.656" data-original="#dce6eb" class="" opacity="1"></ellipse><circle cx="263" cy="62" r="62" fill="#ffffff" data-original="#4e5a61" class="" opacity="1"></circle></g></svg>
+            <div class="app__address" id="adress" data-visible="false">
+                <h2>Cep: <span data-cep></span> </h2>
+                <h2>Rua: <span data-logradouro></span> </h2>
+                <h2>Bairro: <span data-bairro></span> </h2>
+                <h2>Estado: <span data-uf></span> </h2>
+                <h2>Cidade: <span data-localidade></span> </h2>
+                <h2>DDD: <span data-ddd></span> </h2>
+            </div>
+            <div id="error" class="app__error" data-visible="false">
+                <h2>Atenção! Algo deu errado. Verifique se o cep está correto e tente novamente</h2>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/scripts.js"></script>
+</html>
